@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Details About</h2>
+    <ul>
+        <li>const and let</li>
+        <li>array and object destructuring</li>
+        <li>template string</li>
+        <li>object method</li>
+        <li>key</li>
+        <li>value</li>
+        <li>entries</li>
+        <li>seal</li>
+        <li>freeze</li>
+        <li>for in loop in object</li>
+    </ul>
+    <code>
+        // template string <br>
+        const templateString = `this is a template <br> string where we can write multiline <br> code also declare a variable with \${}`;<br>
+        // console.log(templateString); <br>
+
+        // array destructuring <br>
+        const vehicles = ['mustang', 'f-150', 'expedition'];<br>
+        const [car, truck, suv] = vehicles;<br>
+        // console.log(car);<br>
+        // console.log(truck);<br>
+        // console.log(suv);<br>
+
+        function calculate(a, b) {<br>
+            const add = a + b;<br>
+            const minus = a - b;<br>
+            const multiply = a * b;<br>
+            const divide = a / b;<br>
+            return [add, minus, multiply, divide];<br>
+        }
+
+        const [add, minus, multiply, divide] = calculate(20, 10);<br>
+        // console.log(add);<br>
+        // console.log(minus);<br>
+        // console.log(multiply);<br>
+        // console.log(divide);<br>
+
+        // spread operator<br>
+        const odd = [1, 3, 5, 7, 9];<br>
+        const OddNumber = [...odd];<br>
+
+        // array max<br>
+        const maxValue = Math.max(...odd);<br>
+        const minValue = Math.min(...odd);<br>
+
+        // object destructuring<br>
+        const person = {
+            firstName: "Rahim Molla",
+            lastName: "Karim",
+            age: 50
+        };<br>
+
+        // Destructuring<br>
+        let { firstName, lastName } = person;<br>
+        // console.log(Object.keys(person));<br>
+        // console.log(Object.values(person));<br>
+
+        person.age = 20;<br>
+        Object.seal(person);<br>
+        // delete person.age<br>
+        Object.freeze(person);<br>
+        // console.log(Object.isSealed(person));<br>
+        // console.log(Object.entries(person));<br>
+        // console.log(Object.isFrozen(person));<br>
+
+        // for in access property value <br>
+        for (const key in person) {
+            // console.log(key);
+        }<br>
+
+        // arrow function<br>
+    </code>
+    <script src="./script.js"></script>
+</body>
+
+</html>
